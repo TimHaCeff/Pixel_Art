@@ -41,6 +41,8 @@
             </table>
         </div>
         <script src="save.js"></script>
+        
+        
         <?php
         
         if (file_exists("save.txt") != true){
@@ -52,14 +54,14 @@
             $save_file = $_POST['save_color'];
             $height_file = $_POST["height"];
             $width_file = $_POST["width"];
-            if($save_file != NULL)
-            {
-                echo"a";
-                file_put_contents('./save.txt', $height_file.$width_file.$save_file);       //Insère les données
-            }
+            
+            file_put_contents('./save.txt', $height_file.$width_file.$save_file);       //Insère les données
+            
             
         }
         $load_value = file_get_contents("./save.txt");      //Reprend les valeurs
+        
+        
         ?>
         <script>
             var load_val="<?php echo $load_value; ?>";

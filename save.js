@@ -11,5 +11,6 @@ $(function(){
         $.ajax({
            url : "index.php", type : "POST", data : {save_color : save, width : width_save, height : height_save}
         });
+        
     })
 }) 

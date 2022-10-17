@@ -1,7 +1,10 @@
 $(function(){
     var collpse = false;
     
-    $("#create").click(function(){               
+    $("#create").click(function(){
+        
+        $('#Size tr').remove();
+        
         var height = $("#Height").val();    //Récupère les valeur de hauteur et largeur
         var width = $("#Width").val();
         for(var i = 0; i < height; i++)     //Crée les tr d'untableau (hauteur)
