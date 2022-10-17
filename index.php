@@ -42,18 +42,24 @@
         </div>
         <script src="save.js"></script>
         <?php
-        if(!empty($_POST)){
+        
+        if (file_exists("save.txt") != true){
+            fopen("save.txt", "w");     //Création de fichier (le w remplace et efface le contenu du fichier)
+        }
+        
+        
+        if(!empty($_POST)){     //si le $_POST n'est pas vide
             $save_file = $_POST['save_color'];
             $height_file = $_POST["height"];
             $width_file = $_POST["width"];
             if($save_file != NULL)
             {
-                file_put_contents('./save.txt', $height_file.$width_file.$save_file);
-                window.location.reload();
+                echo"a";
+                file_put_contents('./save.txt', $height_file.$width_file.$save_file);       //Insère les données
             }
             
         }
-        $load_value = file_get_contents("./save.txt");
+        $load_value = file_get_contents("./save.txt");      //Reprend les valeurs
         ?>
         <script>
             var load_val="<?php echo $load_value; ?>";

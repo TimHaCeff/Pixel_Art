@@ -9,7 +9,7 @@ $(function(){
         save = save.substring(9);
         alert(save);
         $.ajax({
-           url : "main.php", type : "POST", data : {save_color : save, width : width_save, height : height_save}
+           url : "index.php", type : "POST", data : {save_color : save, width : width_save, height : height_save}
         });
     })
 }) 
