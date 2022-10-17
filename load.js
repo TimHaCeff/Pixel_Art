@@ -6,6 +6,10 @@ $(function(){
     
     
     $("#load").click(function(){
+        
+        $('#Size tr').remove();
+        
+        
         load_split = load_val.split(";");
         
         $("#Height").val(load_split[0]);
