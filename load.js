@@ -30,7 +30,7 @@ $(function(){
         })
         
         
-        $.draw();
+        $.draw(collpse);
         
     })
 })
